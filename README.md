@@ -24,4 +24,14 @@ A project is a collection of apps. Each different aspect of your webapp is an ap
 ### Writing a view
 A view is what the user sees. Once you have defined your view in `views.py`, you need to map the the view to a URL, for which we need a URL conf. Create it in the `[app name]` directory. Next, you need to to point the root URL confs to the `[app name]` module.
 
-Once you have done that, navigating to that URL should return the HttpResponse. 
+Once you have done that, navigating to that URL should return the HttpResponse.
+
+### Database / models
+The default db configuration is sqlite, but this can be changed in `[app name]/settings.py`. Also, take a look at the default installed applications to get an idea of what an application is in the D framework. Since some of these apps use databases, lets initialize them with the command `python manage.py migrate`.
+
+Models represent the fields and behaviors, and layout of your database/data. Once you've created a new model, make sure that your new application is installed in `settings.py`. Then run the command `python manage.py makemigrations [app name]`. Typically `migrate` will manage your dbs for you, but you can check with the command `sqlmigrate [app name] [migrate #]`. The command `check` will check for errors before you migrate.
+1. `makemigrations`
+2. `migrate`
+
+### Shell / API
+Use `manage.py shell` to invoke the python shell. This uses your django package as the local environment, so you can interact with your models etc. You will need to `[object].save()` any change you make to the db in the shell. `[Model].objects.all()` returns a query set that you can iterate over.
