@@ -38,7 +38,8 @@ Use `manage.py shell` to invoke the python shell. This uses your django package 
 
 #RCT
 ### Tic Tac Toe in RCT
-Learning the fundamentals of RCT by building a tic tac toe app. Begin by removing anything that comes preloaded in the src directory `rm -f src/*`
+Learning the fundamentals of RCT by building a tic tac toe app. This section will just cover the concepts with some snippets if necessary. To start with- what is React? A declarative and efficient JS library for building user interfaces. Each UI is composed of isolated pieces of code called components. Components are also called component classes, and take `props` as parameters and returns a hierarchy of views via `render` method. Render actually returns a description, or React element, in a syntax call JSX.
 
+Props can be passed when the a method is called with a value like `this.renderSquare(0)`, and passed by `Square value={i}`, and then accessed by calling `this.props.value`. 
 
 The entirety of this readme are based on tutorials that are written officially by Django and React, and can be found at (django link here),https://reactjs.org/tutorial/tutorial.html
