@@ -35,3 +35,10 @@ Models represent the fields and behaviors, and layout of your database/data. Onc
 
 ### Shell / API
 Use `manage.py shell` to invoke the python shell. This uses your django package as the local environment, so you can interact with your models etc. You will need to `[object].save()` any change you make to the db in the shell. `[Model].objects.all()` returns a query set that you can iterate over.
+
+#RCT
+### Tic Tac Toe in RCT
+Learning the fundamentals of RCT by building a tic tac toe app. Begin by removing anything that comes preloaded in the src directory `rm -f src/*`
+
+
+The entirety of this readme are based on tutorials that are written officially by Django and React, and can be found at (django link here),https://reactjs.org/tutorial/tutorial.html
