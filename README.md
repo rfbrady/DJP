@@ -37,9 +37,17 @@ Models represent the fields and behaviors, and layout of your database/data. Onc
 Use `manage.py shell` to invoke the python shell. This uses your django package as the local environment, so you can interact with your models etc. You will need to `[object].save()` any change you make to the db in the shell. `[Model].objects.all()` returns a query set that you can iterate over.
 
 #RCT
+### Main Concepts
+Wh
+
 ### Tic Tac Toe in RCT
 Learning the fundamentals of RCT by building a tic tac toe app. This section will just cover the concepts with some snippets if necessary. To start with- what is React? A declarative and efficient JS library for building user interfaces. Each UI is composed of isolated pieces of code called components. Components are also called component classes, and take `props` as parameters and returns a hierarchy of views via `render` method. Render actually returns a description, or React element, in a syntax call JSX.
 
-Props can be passed when the a method is called with a value like `this.renderSquare(0)`, and passed by `Square value={i}`, and then accessed by calling `this.props.value`. 
+Props can be passed when the a method is called with a value like `this.renderSquare(0)`, and passed by `Square value={i}`, and then accessed by calling `this.props.value`. Using `() =>` is useful because it avoids this in event handlers, essentially using the function as the prop for an `onClick` method, for example. Dont forget to call super when defining the constructor of a subclass, so you can have the constructor properties of the superclass. Calling setState in a component automatically updates child components inside of it too.
+
+To collect data from multiple children or have two child components communicate with each other, declare the shared state in their parent component. The parent component can pass the sate down to the children using props which keeps children components in sync. This is called lifting state and is common when React components are refactored. It is convention to us `on[Event]` names for function props which represent events and `handle[Event]` for the methods that handle these events.
+
+When refactoring components into function components (which are less tedious to write), you dont need to worry about `this` when trying to reference `props`.
+
 
 The entirety of this readme are based on tutorials that are written officially by Django and React, and can be found at (django link here),https://reactjs.org/tutorial/tutorial.html
